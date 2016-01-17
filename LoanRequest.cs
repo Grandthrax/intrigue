@@ -16,5 +16,10 @@ namespace Intrigue
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //make a loan request
+        }
     }
 }
