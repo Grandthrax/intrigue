@@ -163,23 +163,29 @@ namespace Intrigue
 
         private void button5_Click(object sender, EventArgs e)
         {
-            var prom = new Promises();
+            /*var prom = new Promises();
             prom.promise_to = family.name;
             prom.relationship_bonus = 10;
             prom.turn_due = 3;
             prom.type_of_promise = Promise.Insult;
-            player.promises.Add(prom);
+            player.promises.Add(prom);*/
 
-            Promise_Interaction open = new Promise_Interaction();
+            Promise_Interaction open = new Promise_Interaction(family);
             open.ShowDialog();
 
-            System.Windows.Forms.MessageBox.Show("You promise to insult someone, .");
+          
             button5.Enabled = false;
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            LoanRequest open = new LoanRequest();
+            open.ShowDialog();
         }
     }
 }

@@ -87,12 +87,12 @@ namespace Intrigue
             var character_names = Mechanics.EnumToList();
 
 
-            Patricians Cornelia1 = new Patricians((FamilyNames)Enum.Parse(typeof(FamilyNames), character_names[1]), everythingRandom, 1);
+            Patricians Cornelia1 = new Patricians(new FamilyName(FamilyNames.Cornelius), everythingRandom, 1);
             //create the cornelias
             Corneliawealthlabel.Text = Cornelia1.wealth.ToString() + " million";
 
             //create the Marius
-            var Marius1 = new Patricians((FamilyNames)Enum.Parse(typeof(FamilyNames),character_names[2]), everythingRandom, 2);
+            var Marius1 = new Patricians(new FamilyName(FamilyNames.Marius), everythingRandom, 2);
             mariusWealthLabel.Text = Marius1.wealth.ToString() + " million";
 
             the_patricians.Add(Cornelia1);
@@ -184,7 +184,7 @@ namespace Intrigue
                 if(prom.turn_due < turn_num)
                 {
                     //effect relationship
-                    int patrician_num = (int)prom.promise_to -1;
+                    int patrician_num = prom.promise_to.family_id;
                     the_patricians[patrician_num].relationship[0] += prom.relationship_bonus * -2;
                     System.Windows.Forms.MessageBox.Show("Your relationship with " + prom.promise_to.ToString() + " has deteriated");
 

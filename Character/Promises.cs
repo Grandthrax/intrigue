@@ -8,8 +8,8 @@ namespace Intrigue.Character
 {
     public class Promises
     {
-        public FamilyNames promise_to;
-        public FamilyNames promise_vs;
+        public FamilyName promise_to;
+        public FamilyName promise_vs;
         public Promise type_of_promise;
         public int turn_due;
         public int relationship_bonus;
@@ -18,14 +18,14 @@ namespace Intrigue.Character
         {
             get
             {
-                return promise_to.ToString();
+                return promise_to.family_name_string;
             }
         }
         public string promise_against
         {
             get
             {
-                return promise_vs.ToString();
+                return promise_vs.family_name_string;
             }
         }
         public string type_promise

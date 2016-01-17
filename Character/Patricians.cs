@@ -15,13 +15,13 @@ namespace Intrigue.Character
         public int temper;
         public int jelousy;
 
-        public FamilyNames name;
+        public FamilyName name;
         public int fear;
         public List<int> relationship;
         public int wealth;
         Random everything_random;
 
-        public Patricians(FamilyNames Name, Random randomness, int Id)
+        public Patricians(FamilyName Name, Random randomness, int Id)
         {
             id = Id;
             fear = 0;

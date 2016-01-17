@@ -14,8 +14,10 @@ namespace Intrigue
 {
     public partial class Promise_Interaction : Form
     {
-        public Promise_Interaction()
+        Patricians family_name;
+        public Promise_Interaction(Patricians family)
         {
+            family_name = family;
             InitializeComponent();
 
             var mm = Mechanics.EnumToList();
@@ -29,6 +31,7 @@ namespace Intrigue
         private void button1_Click(object sender, EventArgs e)
         {
 
+            MessageBox.Show("You promise to insult someone, .");
         }
     }
 }
