@@ -133,7 +133,7 @@ namespace Intrigue
                     }
                     else
                     {
-                        System.Windows.Forms.MessageBox.Show("Something is afoot, there are murmerings in the street but you can't get a straight answer out of anyone");
+                        System.Windows.Forms.MessageBox.Show("Something is afoot, there are murmerings in the street but when you seek for an answer, you find only furtive glances and vague warnings.");
                     }
 
                 }
