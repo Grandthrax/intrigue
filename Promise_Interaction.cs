@@ -15,15 +15,21 @@ namespace Intrigue
     public partial class Promise_Interaction : Form
     {
         Patricians family_name;
-        public Promise_Interaction(Patricians family)
+        TheCast the_cast;
+        public Promise_Interaction(Patricians family, TheCast cast)
         {
             family_name = family;
+            the_cast = cast;
+
             InitializeComponent();
 
             var mm = Mechanics.EnumToList();
             for(int i = 1; i < mm.Count; i++)
             {
-                radioGroup2.Properties.Items.Add(new RadioGroupItem(i, mm[i]));
+                if(i != family_name.name.family_id)
+                {
+                    radioGroup2.Properties.Items.Add(new RadioGroupItem(i, mm[i]));
+                }
             }
             radioGroup2.Properties.EndUpdate();
         }

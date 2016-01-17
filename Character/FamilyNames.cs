@@ -8,7 +8,7 @@ namespace Intrigue.Character
 {
     public enum FamilyNames
     {
-        Player, Cornelius, Marius
+        Player, Cornelius, Marius,  Julia, Atilia
     };
     public enum Promise
     {
@@ -25,9 +25,24 @@ namespace Intrigue.Character
         {
             family_name_enum = name;
             family_name_string = name.ToString();
-            family_id = (int)name - 1;
+            family_id = (int)name;
         }
 
+    }
+
+    public class TheCast
+    {
+        public Dictionary<PatricianPair, Relationships> the_relationships;
+
+        public List<Patricians> the_patricians;
+        public Player the_player;
+
+        public TheCast()
+        {
+            the_relationships = new Dictionary<PatricianPair, Relationships>();
+            the_patricians = new List<Patricians>();
+            the_player = new Player();
+        }
     }
 
 }

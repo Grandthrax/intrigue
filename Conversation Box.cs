@@ -14,26 +14,32 @@ namespace Intrigue
     public partial class Conversation_Box : Form
     {
         Patricians family;
-        Player player;
-        public Conversation_Box(Patricians Family, Player the_player)
+        TheCast the_cast;
+        public Conversation_Box(Patricians Family, TheCast cast)
         {
             InitializeComponent();
             family = Family;
-            player = the_player;
+            the_cast = cast;
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var list_of_families = Mechanics.EnumToList();
-            for(int i = 1; i < list_of_families.Count; i ++)
+            /* var list_of_families = Mechanics.EnumToList();
+             for(int i = 1; i < list_of_families.Count; i ++)
+             {
+                 if(i != family.name.family_id)
+                 {
+                     discussionTextBox.Text = "I think of the " + list_of_families[i] + " family " + family.relationship[i].ToString();
+                 }
+             }*/
+            string dicussion = "You ask about the other families? Well OK. Here me out.";
+            foreach(var rel in the_cast.the_relationships.Where(x => x.Key.Contains(family)))
             {
-                if(i != family.id)
-                {
-                    discussionTextBox.Text = "I think of the " + list_of_families[i] + " family " + family.relationship[i].ToString();
-                }
+
+                dicussion += " I think of the " + rel.Key.GetOther(family).name.family_name_string + " family " + rel.Value.opinion + ".";
             }
-                
+            discussionTextBox.Text = dicussion;
         }
 
         private void button2_Click(object sender, EventArgs e)

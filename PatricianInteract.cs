@@ -14,24 +14,24 @@ namespace Intrigue
     public partial class PatricianInteract : Form
     {
         Patricians family;
-        Player player;
+        TheCast cast;
 
         
-        public PatricianInteract(Patricians Family, Player the_player)
+        public PatricianInteract(Patricians Family, TheCast the_cast)
         {
             family = Family;
             InitializeComponent();
-            PatricianNamelabel.Text = family.name.ToString();
+            PatricianNamelabel.Text = family.name.family_name_string;
             feelingLabel.Text = "";
             feelingLabel.AutoSize = true;
-            player = the_player;
+            cast = the_cast;
 
             PlayerPerception();
         }
 
         private void PlayerPerception()
         {
-            int comparison_metric = 10 - player.observation;
+            int comparison_metric = 10 - cast.the_player.observation;
 
             
             feelingLabel.Text = "You observe the patrician carefully and notice";
@@ -90,7 +90,7 @@ namespace Intrigue
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int relationship_affect = (player.oratory - 5) + (family.ego - 5);
+            int relationship_affect = (cast.the_player.oratory - 5) + (family.ego - 5);
 
             if(relationship_affect < -1)
             {
@@ -103,7 +103,7 @@ namespace Intrigue
                     this.Close();
                     return;
                 }
-                if(Mechanics.ObservationRoll(player))
+                if(Mechanics.ObservationRoll(cast.the_player))
                 {
                     System.Windows.Forms.MessageBox.Show("The Patrician frowns slightly after hearing your flatery");
                 }
@@ -115,7 +115,7 @@ namespace Intrigue
             }
             else if (relationship_affect > 1)
             {
-                if (Mechanics.ObservationRoll(player))
+                if (Mechanics.ObservationRoll(cast.the_player))
                 {
                     System.Windows.Forms.MessageBox.Show("The Patrician smiles slightly after hearing your flatery");
                 }
@@ -126,7 +126,7 @@ namespace Intrigue
             }
             else
             {
-                if (Mechanics.ObservationRoll(player))
+                if (Mechanics.ObservationRoll(cast.the_player))
                 {
                     System.Windows.Forms.MessageBox.Show("The Patrician doesn't seem to care");
                 }
@@ -156,7 +156,7 @@ namespace Intrigue
 
         private void button13_Click(object sender, EventArgs e)
         {
-            Conversation_Box open = new Conversation_Box(family, player);
+            Conversation_Box open = new Conversation_Box(family, cast);
             open.ShowDialog();
 
         }
@@ -170,7 +170,7 @@ namespace Intrigue
             prom.type_of_promise = Promise.Insult;
             player.promises.Add(prom);*/
 
-            Promise_Interaction open = new Promise_Interaction(family);
+            Promise_Interaction open = new Promise_Interaction(family, cast);
             open.ShowDialog();
 
           

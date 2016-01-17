@@ -16,10 +16,8 @@ namespace Intrigue
         Random everythingRandom;
 
         private int turn_num;
-        
-        private List<Patricians> the_patricians;
-        
-        private Player the_player;
+
+        private TheCast the_cast;
 
         private List<string> character_names;
 
@@ -34,7 +32,8 @@ namespace Intrigue
         private void FirstTurn()
         {
 
-            the_patricians = new List<Patricians>();
+            the_cast = new TheCast();
+
             character_names = new List<string>();
 
             button2.Enabled = true;
@@ -52,9 +51,8 @@ namespace Intrigue
             //create the families
             InitiatePatricians();
 
-            the_player = new Player();
 
-            MainCharacter open = new MainCharacter(the_player);
+            MainCharacter open = new MainCharacter(the_cast.the_player);
             open.ShowDialog();
 
             UpdatePage();
@@ -66,11 +64,11 @@ namespace Intrigue
 
         private void UpdatePage()
         {
-            debtLabel.Text = the_player.debt.ToString();
-            moneyLabel.Text = the_player.wealth.ToString();
+            debtLabel.Text = the_cast.the_player.debt.ToString();
+            moneyLabel.Text = the_cast.the_player.wealth.ToString();
 
 
-            var list = new BindingList<Promises>(the_player.promises);
+            var list = new BindingList<Promises>(the_cast.the_player.promises);
             
             dataGridView1.DataSource = list;
             
@@ -87,19 +85,46 @@ namespace Intrigue
             var character_names = Mechanics.EnumToList();
 
 
-            Patricians Cornelia1 = new Patricians(new FamilyName(FamilyNames.Cornelius), everythingRandom, 1);
+            Patricians Cornelia1 = new Patricians(new FamilyName(FamilyNames.Cornelius), everythingRandom);
             //create the cornelias
             Corneliawealthlabel.Text = Cornelia1.wealth.ToString() + " million";
+            the_cast.the_patricians.Add(Cornelia1);
 
             //create the Marius
-            var Marius1 = new Patricians(new FamilyName(FamilyNames.Marius), everythingRandom, 2);
+            var Marius1 = new Patricians(new FamilyName(FamilyNames.Marius), everythingRandom);
             mariusWealthLabel.Text = Marius1.wealth.ToString() + " million";
+            the_cast.the_patricians.Add(Marius1);
 
-            the_patricians.Add(Cornelia1);
-            the_patricians.Add(Marius1);
+            //create the Julias
+            var Julia = new Patricians(new FamilyName(FamilyNames.Julia), everythingRandom);
+            pat3label.Text = Julia.wealth.ToString() + " million";
+            the_cast.the_patricians.Add(Julia);
+
+            //create the Atilias
+            var Atilia = new Patricians(new FamilyName(FamilyNames.Atilia), everythingRandom);
+            pat4label.Text = Atilia.wealth.ToString() + " million";
+            the_cast.the_patricians.Add(Atilia);
+
+
 
             //now build relationship it is one less than real
-            the_patricians[0].relationship[2] = the_patricians[1].relationship[1];
+            //the_cast.the_patricians.FindLast(x=>x.name.family_name_enum == FamilyNames.Cornelius).relationship[2] = the_cast.the_patricians.FindLast(x=>x.name.family_name_enum == FamilyNames.Marius).relationship[1];
+
+            foreach (var pat in the_cast.the_patricians)
+            {
+                foreach (var pat2 in the_cast.the_patricians)
+                {
+                    if(pat != pat2)
+                    {
+                       
+                        if(!the_cast.the_relationships.Any(x => x.Key.Any(pat,pat2)))
+                        {
+                            the_cast.the_relationships.Add(new PatricianPair(pat, pat2), new Relationships(everythingRandom.Next(-50, 50)));
+                        }
+                    }
+
+                }
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -121,15 +146,38 @@ namespace Intrigue
             turnsLeftLabel.Text = "Turn " + turn_num.ToString();
 
             //Check out the relationships between the houses
-            for (int i = 2; i < 3; i++)
-            {
-                the_patricians[0].relationship[i] += everythingRandom.Next(-5, 5);
 
-                if (the_patricians[0].relationship[i] < -25)
+            foreach (var rel in the_cast.the_relationships)
+            {
+                rel.Value.opinion += everythingRandom.Next(-5, 5);
+
+                if (rel.Value.opinion < -25)
                 {
-                    if (Mechanics.StreetSmartCheck(the_player))
+                    if (Mechanics.StreetSmartCheck(the_cast.the_player))
                     {
-                        System.Windows.Forms.MessageBox.Show("You hear rumours that the " + the_patricians[0].name + " families thugs have attacked some the " + character_names[i] + " families slaves. This could be civil war!");
+                        MessageBox.Show("You hear rumours that the " + rel.Key.patrician1.name.family_name_string + " families thugs have attacked some the " + rel.Key.patrician2.name.family_name_string + " families slaves. This could be civil war!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Something is afoot, there are murmerings in the street but when you seek for an answer, you find only furtive glances and vague warnings.");
+                    }
+
+                }
+                if (rel.Value.opinion < -30)
+                {
+                    EndGame(5);
+                }
+            }
+
+            /*for (int i = 2; i < 3; i++)
+            {
+                the_cast.the_patricians[0].relationship[i] += everythingRandom.Next(-5, 5);
+
+                if (the_cast.the_patricians[0].relationship[i] < -25)
+                {
+                    if (Mechanics.StreetSmartCheck(the_cast.the_player))
+                    {
+                        System.Windows.Forms.MessageBox.Show("You hear rumours that the " + the_cast.the_patricians[0].name + " families thugs have attacked some the " + character_names[i] + " families slaves. This could be civil war!");
                     }
                     else
                     {
@@ -137,29 +185,29 @@ namespace Intrigue
                     }
 
                 }
-                if (the_patricians[0].relationship[i] < -30)
+                if (the_cast.the_patricians[0].relationship[i] < -30)
                 {
                     EndGame(5);
                 }
-            }
+            }*/
 
 
             
 
 
                 //Check if you are assasisinated
-            if (the_patricians[0].relationship[0] < -49 | the_patricians[1].relationship[0] < -49)
+            if (the_cast.the_patricians[0].relationship[0] < -49 | the_cast.the_patricians[1].relationship[0] < -49)
                 {
                     EndGame(1);
                 }
 
             if(turn_num > 5)
             {
-                if (the_patricians[0].relationship[0] > 49)
+                if (the_cast.the_patricians[0].relationship[0] > 49)
                 {
                     EndGame(2);
                 }
-                else if (the_patricians[1].relationship[0] > 49)
+                else if (the_cast.the_patricians[1].relationship[0] > 49)
                 {
                     EndGame(3);
                 }
@@ -177,7 +225,7 @@ namespace Intrigue
         {
 
             var temp = new List<Promises>();
-            foreach(var prom in the_player.promises)
+            foreach(var prom in the_cast.the_player.promises)
             {
                 
 
@@ -185,10 +233,10 @@ namespace Intrigue
                 {
                     //effect relationship
                     int patrician_num = prom.promise_to.family_id;
-                    the_patricians[patrician_num].relationship[0] += prom.relationship_bonus * -2;
+                    the_cast.the_patricians[patrician_num].relationship[0] += prom.relationship_bonus * -2;
                     System.Windows.Forms.MessageBox.Show("Your relationship with " + prom.promise_to.ToString() + " has deteriated");
 
-                    the_player.old_promises.Add(prom);
+                    the_cast.the_player.old_promises.Add(prom);
                     temp.Add(prom);
 
                 }
@@ -201,7 +249,7 @@ namespace Intrigue
             }
             foreach(var t in temp)
             {
-                the_player.promises.Remove(t);
+                the_cast.the_player.promises.Remove(t);
             }
         }
 
@@ -240,18 +288,17 @@ namespace Intrigue
 
         private void interactCorneliaButton_Click(object sender, EventArgs e)
         {
-            PatricianInteract open = new PatricianInteract(the_patricians[0], the_player);
+            PatricianInteract open = new PatricianInteract(the_cast.the_patricians[0], the_cast);
             open.ShowDialog();
 
             interactCorneliaButton.Enabled = false;
-
-            the_patricians[1].relationship[the_patricians[0].id] = the_patricians[0].relationship[the_patricians[1].id];
+            
             UpdatePage();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            PatricianInteract open = new PatricianInteract(the_patricians[1], the_player);
+            PatricianInteract open = new PatricianInteract(the_cast.the_patricians[1], the_cast);
             open.ShowDialog();
 
             
@@ -260,6 +307,27 @@ namespace Intrigue
             UpdatePage();
         }
 
+        private void pat3button_Click(object sender, EventArgs e)
+        {
+            PatricianInteract open = new PatricianInteract(the_cast.the_patricians[2], the_cast);
+            open.ShowDialog();
+
+
+
+            pat3button.Enabled = false;
+            UpdatePage();
+        }
+
+        private void pat4button_Click(object sender, EventArgs e)
+        {
+            PatricianInteract open = new PatricianInteract(the_cast.the_patricians[3], the_cast);
+            open.ShowDialog();
+
+
+
+            pat4button.Enabled = false;
+            UpdatePage();
+        }
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -269,5 +337,7 @@ namespace Intrigue
         {
 
         }
+
+       
     }
 }
