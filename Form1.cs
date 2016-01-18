@@ -54,6 +54,7 @@ namespace Intrigue
             //create the tribes
             InitiateTribes();
 
+            
 
             MainCharacter open = new MainCharacter(the_cast.the_player);
             open.ShowDialog();
@@ -76,7 +77,7 @@ namespace Intrigue
             string Tribe_Palatina_Description = "In the South-West of the city, from the Palatium hill and beyond.These traditionalists consider themselves the original romans, everyone else is just new blood to them.";
             //Each district is loyal to one of the four houses, and more likely to be influenced by their favours.
             // public Tribe_Palatina_House_Loyalty Familynames
-             int Tribe_Palatina_Patrician_population = 50;
+             int Tribe_Palatina_Patrician_population = 10;
              int Tribe_Palatina_Equite_population = 100;
              int Tribe_Palatina_PlebisNobilis_population = 2000;
              int Tribe_Palatina_Pleb_population = 10000;
@@ -105,7 +106,7 @@ namespace Intrigue
             Tribe_Palatina_Description = "These are Collinas";
             //Each district is loyal to one of the four houses, and more likely to be influenced by their favours.
             // public Tribe_Palatina_House_Loyalty Familynames
-            Tribe_Palatina_Patrician_population = 50;
+            Tribe_Palatina_Patrician_population = 20;
             Tribe_Palatina_Equite_population = 100;
             Tribe_Palatina_PlebisNobilis_population = 2000;
             Tribe_Palatina_Pleb_population = 10000;
@@ -126,7 +127,64 @@ namespace Intrigue
 
             the_cast.the_tribes.Add(Collina);
 
+            //create the Suburra
+            tribe_name_temp = new TribeName(TribeNameEnum.Suburra);
+            Tribes Suburra;
 
+            //A description for display when clicking on the district. Possibly put in an observation check later.
+            Tribe_Palatina_Description = "These are Suburras.";
+            //Each district is loyal to one of the four houses, and more likely to be influenced by their favours.
+            // public Tribe_Palatina_House_Loyalty Familynames
+            Tribe_Palatina_Patrician_population = 30;
+            Tribe_Palatina_Equite_population = 100;
+            Tribe_Palatina_PlebisNobilis_population = 2000;
+            Tribe_Palatina_Pleb_population = 10000;
+            Tribe_Palatina_Proletarii_population = 5000;
+            //The total population who can vote, for determining election outcomes.
+            Tribe_Palatina_Proposal_Support = 50;
+            Tribe_Palatina_Proposal_Oppose = 50;
+
+            Suburra = new Tribes(tribe_name_temp, everythingRandom);
+            Suburra.patrician_population = Tribe_Palatina_Patrician_population;
+            Suburra.equite_population = Tribe_Palatina_Equite_population;
+            Suburra.plebisnobilis_population = Tribe_Palatina_PlebisNobilis_population;
+            Suburra.pleb_population = Tribe_Palatina_Pleb_population;
+            Suburra.proletarii_population = Tribe_Palatina_Proletarii_population;
+            Suburra.proposal_support = Tribe_Palatina_Proposal_Support;
+            Suburra.proposal_oppose = Tribe_Palatina_Proposal_Oppose;
+            Suburra.description = Tribe_Palatina_Description;
+
+            the_cast.the_tribes.Add(Suburra);
+
+
+            //create the Esquilana
+            tribe_name_temp = new TribeName(TribeNameEnum.Esquilana);
+            Tribes Esquilana;
+
+            //A description for display when clicking on the district. Possibly put in an observation check later.
+            Tribe_Palatina_Description = "These are Esquilana.";
+            //Each district is loyal to one of the four houses, and more likely to be influenced by their favours.
+            // public Tribe_Palatina_House_Loyalty Familynames
+            Tribe_Palatina_Patrician_population = 40;
+            Tribe_Palatina_Equite_population = 100;
+            Tribe_Palatina_PlebisNobilis_population = 2000;
+            Tribe_Palatina_Pleb_population = 10000;
+            Tribe_Palatina_Proletarii_population = 5000;
+            //The total population who can vote, for determining election outcomes.
+            Tribe_Palatina_Proposal_Support = 50;
+            Tribe_Palatina_Proposal_Oppose = 50;
+
+            Esquilana = new Tribes(tribe_name_temp, everythingRandom);
+            Esquilana.patrician_population = Tribe_Palatina_Patrician_population;
+            Esquilana.equite_population = Tribe_Palatina_Equite_population;
+            Esquilana.plebisnobilis_population = Tribe_Palatina_PlebisNobilis_population;
+            Esquilana.pleb_population = Tribe_Palatina_Pleb_population;
+            Esquilana.proletarii_population = Tribe_Palatina_Proletarii_population;
+            Esquilana.proposal_support = Tribe_Palatina_Proposal_Support;
+            Esquilana.proposal_oppose = Tribe_Palatina_Proposal_Oppose;
+            Esquilana.description = Tribe_Palatina_Description;
+
+            the_cast.the_tribes.Add(Esquilana);
         }
 
         private void UpdatePage()
@@ -267,7 +325,7 @@ namespace Intrigue
                 }
 
             if(turn_num > 5)
-            {
+                    {
                 if (the_cast.the_patricians[0].relationship[0] > 49)
                 {
                     EndGame(2);
