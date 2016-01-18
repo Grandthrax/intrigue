@@ -51,12 +51,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\Intrigue backup\Intrigue.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="..\..\Intrigue backup\Intrigue.Designer.cs">
-      <DependentUpon>Intrigue.cs</DependentUpon>
-    </Compile>
     <Compile Include="Character\Actions.cs" />
     <Compile Include="Character\FamilyNames.cs" />
     <Compile Include="Character\MainCharacter.cs">
@@ -87,6 +81,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Democracy\InteractTribe1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Democracy\InteractTribe1.Designer.cs">
+      <DependentUpon>InteractTribe1.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoanRequest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,9 +108,6 @@
       <DependentUpon>Promise_Interaction.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="..\..\Intrigue backup\Intrigue.resx">
-      <DependentUpon>Intrigue.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Character\MainCharacter.resx">
       <DependentUpon>MainCharacter.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Democracy\InteractTribe1.resx">
+      <DependentUpon>InteractTribe1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoanRequest.resx">
       <DependentUpon>LoanRequest.cs</DependentUpon>
