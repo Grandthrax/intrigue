@@ -8,7 +8,7 @@ namespace Intrigue.Character
 {
     public enum TribeNameEnum
     {
-        Palatina, Collina
+        Palatina, Collina, Suburra, Esquilana, 
     };
 
     public class TribeName
