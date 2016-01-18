@@ -1,4 +1,5 @@
 ﻿using Intrigue.Character;
+using Intrigue.Text;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,18 +34,18 @@ namespace Intrigue
                      discussionTextBox.Text = "I think of the " + list_of_families[i] + " family " + family.relationship[i].ToString();
                  }
              }*/
-            string dicussion = "You ask about the other families? Well OK. Here me out.";
+            string dicussion = ViewedText.patrician_OpinionOpening();
             foreach(var rel in the_cast.the_relationships.Where(x => x.Key.Contains(family)))
             {
 
-                dicussion += " I think of the " + rel.Key.GetOther(family).name.family_name_string + " family " + rel.Value.opinion + ".";
+                dicussion += ViewedText.patrician_OpinionOf(rel.Key.GetOther(family).name.family_name_string, rel.Value.opinion);
             }
             discussionTextBox.Text = dicussion;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            discussionTextBox.Text = "I think of you " + family.relationship[0].ToString();
+            discussionTextBox.Text = ViewedText.patrician_OpinionOfPlayer(family.relationship[0]);
         }
     }
 }

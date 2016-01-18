@@ -1,4 +1,5 @@
 ﻿using Intrigue.Character;
+using Intrigue.Text;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,58 +35,22 @@ namespace Intrigue
             int comparison_metric = 10 - cast.the_player.observation;
 
             
-            feelingLabel.Text = "You observe the patrician carefully and notice";
+            feelingLabel.Text = ViewedText.patrician_openingObservation();
 
             if(comparison_metric < family.ego)
             {
-                if (family.ego >= 9)
-                {
-                    feelingLabel.Text = feelingLabel.Text + " he thinks he is Jupiter himself the pompeous fat arse.";
-                }
-                else if (family.ego >= 6)
-                {
-                    feelingLabel.Text = feelingLabel.Text + " he strides around like he's a king.";
-                }
-                else if (family.ego >= 4)
-                {
-                    feelingLabel.Text = feelingLabel.Text + " he carries himself with a quiet dignity and confidence.";
-                }
-                else if (family.ego >= 1)
-                {
-                    feelingLabel.Text = feelingLabel.Text + " a humble man of Rome.";
-                }
-                else if (family.ego >= 0)
-                {
-                    feelingLabel.Text = feelingLabel.Text + " he scurries around like he is afraid the slaves will bark at him.";
-                }
-                
+
+                feelingLabel.Text += ViewedText.patrician_ego(family.ego);
             }
 
             if (comparison_metric < family.temper)
             {
-                if (family.temper >= 9)
-                {
-                    feelingLabel.Text = feelingLabel.Text + " a slave lies kicked to death in the corner. This man has temper problems to rival Mars himself.";
-                }
-                else if (family.temper >= 6)
-                {
-                    feelingLabel.Text = feelingLabel.Text + " his temple throbs and he flushes red in the face from time to time.";
-                }
-                else if (family.temper >= 4)
-                {
-                    feelingLabel.Text = feelingLabel.Text + " at most times he seems even tempered but you guess he is not one to cross.";
-                }
-                else if (family.temper >= 1)
-                {
-                    feelingLabel.Text = feelingLabel.Text + " this man heart is cool and calm. He gazes on all with a fair eye.";
-                }
-                else if (family.temper >= 0)
-                {
-                    feelingLabel.Text = feelingLabel.Text + " as meak and mild as a little kitten.";
-                }
-                feelingLabel.AutoSize = true;
+                feelingLabel.Text += ViewedText.patrician_temper(family.temper);
+ 
             }
-            
+
+            feelingLabel.AutoSize = true;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -99,17 +64,17 @@ namespace Intrigue
                 {
                     relationship_affect = relationship_affect * 3;
                     family.relationship[0] = family.relationship[0] + relationship_affect;
-                    System.Windows.Forms.MessageBox.Show("The Patrician goes mad and throws you out for your impudence");
+                    MessageBox.Show(ViewedText.patrician_flatteryThrowsOut());
                     this.Close();
                     return;
                 }
                 if(Mechanics.ObservationRoll(cast.the_player))
                 {
-                    System.Windows.Forms.MessageBox.Show("The Patrician frowns slightly after hearing your flatery");
+                    MessageBox.Show(ViewedText.patrician_flatteryFrows());
                 }
                 else
                 {
-                    System.Windows.Forms.MessageBox.Show("You cannot tell what the patrician thinks of your flattery");
+                    MessageBox.Show(ViewedText.patrician_flatteryCannotTell());
                 }
                 
             }
@@ -117,22 +82,22 @@ namespace Intrigue
             {
                 if (Mechanics.ObservationRoll(cast.the_player))
                 {
-                    System.Windows.Forms.MessageBox.Show("The Patrician smiles slightly after hearing your flatery");
+                    MessageBox.Show(ViewedText.patrician_flatterySmiles());
                 }
                 else
                 {
-                    System.Windows.Forms.MessageBox.Show("You cannot tell what the patrician thinks of your flattery");
+                    MessageBox.Show(ViewedText.patrician_flatteryCannotTell());
                 }
             }
             else
             {
                 if (Mechanics.ObservationRoll(cast.the_player))
                 {
-                    System.Windows.Forms.MessageBox.Show("The Patrician doesn't seem to care");
+                    MessageBox.Show(ViewedText.patrician_flatteryDoesntCare());
                 }
                 else
                 {
-                    System.Windows.Forms.MessageBox.Show("You cannot tell what the patrician thinks of your flattery");
+                    MessageBox.Show(ViewedText.patrician_flatteryCannotTell());
                 }
             }
 

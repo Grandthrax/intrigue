@@ -1,4 +1,5 @@
 ﻿using Intrigue.Character;
+using Intrigue.Text;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -278,11 +279,11 @@ namespace Intrigue
                 {
                     if (Mechanics.StreetSmartCheck(the_cast.the_player))
                     {
-                        MessageBox.Show("You hear rumours that the " + rel.Key.patrician1.name.family_name_string + " families thugs have attacked some the " + rel.Key.patrician2.name.family_name_string + " families slaves. This could be civil war!");
+                        MessageBox.Show(ViewedText.civilunrest_highstreetsmart(rel.Key.patrician1.name.family_name_string, rel.Key.patrician2.name.family_name_string));
                     }
                     else
                     {
-                        MessageBox.Show("Something is afoot, there are murmerings in the street but when you seek for an answer, you find only furtive glances and vague warnings.");
+                        MessageBox.Show(ViewedText.civilunrest_lowstreetsmart());
                     }
 
                 }
@@ -357,7 +358,7 @@ namespace Intrigue
                     //effect relationship
                     int patrician_num = prom.promise_to.family_id;
                     the_cast.the_patricians[patrician_num].relationship[0] += prom.relationship_bonus * -2;
-                    System.Windows.Forms.MessageBox.Show("Your relationship with " + prom.promise_to.ToString() + " has deteriated");
+                    MessageBox.Show(ViewedText.relationship_deteriated(prom.promise_to.ToString()));
 
                     the_cast.the_player.old_promises.Add(prom);
                     temp.Add(prom);
@@ -383,19 +384,19 @@ namespace Intrigue
             switch(situation)
             {
                 case 1:
-                gameOverLabel.Text = "You have been assasinated!";
+                gameOverLabel.Text = ViewedText.player_assasinated();
                     break;
                 case 2:
-                    gameOverLabel.Text = "You lost the election but the Cornelia family adopts you!";
+                    gameOverLabel.Text = ViewedText.player_adopted("Cornelia");
                     break;
                 case 3:
-                    gameOverLabel.Text = "You lost the election but the Marius Family adopts you!";
+                    gameOverLabel.Text = ViewedText.player_adopted("Marius"); ;
                     break;
                 case 4:
-                    gameOverLabel.Text = "You lost the election";
+                    gameOverLabel.Text = ViewedText.player_loseselection();
                     break;
                 case 5:
-                    gameOverLabel.Text = "A civil war has broken out between two of the major families. You put your aims of high office aside while you fight for yourself";
+                    gameOverLabel.Text = ViewedText.civil_war();
                     break;
             }
 
