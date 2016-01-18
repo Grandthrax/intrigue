@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Intrigue.Character;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,11 @@ namespace Intrigue.Democracy
 {
     public partial class InteractTribe : Form
     {
-        public InteractTribe()
+        private TheCast the_cast;
+
+        public InteractTribe(TheCast cast)
         {
+            the_cast = cast;
             InitializeComponent();
             lblpalatinasupport.Text = Tribe_Palatina_Proposal_Support.ToString();
             labelpalatinaoppose.Text = Tribe_Palatina_Proposal_Oppose.ToString();
@@ -56,6 +60,7 @@ namespace Intrigue.Democracy
 
         private void button5_Click(object sender, EventArgs e)
         {
+
              Tribe_Palatina_Proposal_Support += 5;
             lblwhatyoudid.Text = "You shook a few hands and kissed a few babies. People's views haven't changed that much, but it helps.";
             lblpalatinasupport.Text = Tribe_Palatina_Proposal_Support.ToString();
@@ -63,9 +68,16 @@ namespace Intrigue.Democracy
 
         private void button9_Click(object sender, EventArgs e)
         {
+            the_cast.the_player.wealth -= 50;
+
             Tribe_Palatina_Proposal_Support += 25;
             lblwhatyoudid.Text = "You splash your cash, and win some support.";
             lblpalatinasupport.Text = Tribe_Palatina_Proposal_Support.ToString();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -83,3 +83,5 @@ C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\tr
 C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\obj\Debug\Intrigue.pdb
 C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\obj\Debug\Intrigue.Democracy.Canvass.resources
 C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\obj\Debug\Intrigue.Democracy.InteractTribe.resources
+C:\Users\Sam\Desktop\Intrigue2\trunk\obj\Debug\Intrigue.Democracy.Canvass.resources
+C:\Users\Sam\Desktop\Intrigue2\trunk\obj\Debug\Intrigue.Democracy.InteractTribe.resources
