@@ -39,6 +39,23 @@ namespace Intrigue.Democracy
             InteractTribe frm = new InteractTribe(the_cast, temp);
             frm.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {  // go visit the Suburra tribe
+            Tribes temp = the_cast.the_tribes.FindLast(x => x.name.tribe_name_enum == TribeNameEnum.Suburra);
+
+            InteractTribe frm = new InteractTribe(the_cast, temp);
+            frm.ShowDialog();
+}
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // go visit the Esquilana tribe
+            Tribes temp = the_cast.the_tribes.FindLast(x => x.name.tribe_name_enum == TribeNameEnum.Esquilana);
+
+            InteractTribe frm = new InteractTribe(the_cast, temp);
+            frm.ShowDialog();
+        }
     }
 }
 
