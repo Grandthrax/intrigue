@@ -40,3 +40,46 @@ C:\Users\Sam\Desktop\Intrigue2\trunk\obj\Debug\Intrigue.Properties.Resources.res
 C:\Users\Sam\Desktop\Intrigue2\trunk\obj\Debug\Intrigue.csproj.GenerateResource.Cache
 C:\Users\Sam\Desktop\Intrigue2\trunk\obj\Debug\Intrigue.exe
 C:\Users\Sam\Desktop\Intrigue2\trunk\obj\Debug\Intrigue.pdb
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\bin\Debug\Intrigue.exe.config
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\bin\Debug\Intrigue.exe
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\bin\Debug\Intrigue.pdb
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\bin\Debug\DevExpress.Data.v13.2.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\bin\Debug\DevExpress.Printing.v13.2.Core.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\bin\Debug\DevExpress.Sparkline.v13.2.Core.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\bin\Debug\DevExpress.Utils.v13.2.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\bin\Debug\DevExpress.XtraEditors.v13.2.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\bin\Debug\DevExpress.Data.v13.2.xml
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\bin\Debug\DevExpress.Printing.v13.2.Core.xml
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\bin\Debug\DevExpress.Sparkline.v13.2.Core.xml
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\bin\Debug\DevExpress.Utils.v13.2.xml
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\bin\Debug\DevExpress.XtraEditors.v13.2.xml
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\bin\Debug\de\DevExpress.Data.v13.2.resources.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\bin\Debug\es\DevExpress.Data.v13.2.resources.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\bin\Debug\ja\DevExpress.Data.v13.2.resources.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\bin\Debug\ru\DevExpress.Data.v13.2.resources.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\bin\Debug\de\DevExpress.Printing.v13.2.Core.resources.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\bin\Debug\es\DevExpress.Printing.v13.2.Core.resources.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\bin\Debug\ja\DevExpress.Printing.v13.2.Core.resources.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\bin\Debug\ru\DevExpress.Printing.v13.2.Core.resources.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\bin\Debug\ru\DevExpress.Sparkline.v13.2.Core.resources.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\bin\Debug\de\DevExpress.Utils.v13.2.resources.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\bin\Debug\es\DevExpress.Utils.v13.2.resources.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\bin\Debug\ja\DevExpress.Utils.v13.2.resources.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\bin\Debug\ru\DevExpress.Utils.v13.2.resources.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\bin\Debug\de\DevExpress.XtraEditors.v13.2.resources.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\bin\Debug\es\DevExpress.XtraEditors.v13.2.resources.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\bin\Debug\ja\DevExpress.XtraEditors.v13.2.resources.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\bin\Debug\ru\DevExpress.XtraEditors.v13.2.resources.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\obj\Debug\Intrigue.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\obj\Debug\Intrigue.Character.MainCharacter.resources
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\obj\Debug\Intrigue.Conversation_Box.resources
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\obj\Debug\Intrigue.Form1.resources
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\obj\Debug\Intrigue.LoanRequest.resources
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\obj\Debug\Intrigue.PatricianInteract.resources
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\obj\Debug\Intrigue.Promise_Interaction.resources
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\obj\Debug\Intrigue.Properties.Resources.resources
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\obj\Debug\Intrigue.csproj.GenerateResource.Cache
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\obj\Debug\Intrigue.exe
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\obj\Debug\Intrigue.pdb
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\obj\Debug\Intrigue.Democracy.Canvass.resources
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\obj\Debug\Intrigue.Democracy.InteractTribe.resources

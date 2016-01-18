@@ -338,6 +338,11 @@ namespace Intrigue
 
         }
 
-       
+        private void btncanvass_Click(object sender, EventArgs e)
+        {
+                Democracy.Canvass frm = new Democracy.Canvass();
+                frm.Show();
+            
+        }
     }
 }
