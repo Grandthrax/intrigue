@@ -46,9 +46,7 @@ namespace Intrigue
             turnsLeftLabel.Text = "Turn " + turn_num.ToString();
             gameOverLabel.Text = "";
 
-
             
-
             //create the families
             InitiatePatricians();
 

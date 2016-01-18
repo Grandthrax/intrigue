@@ -147,5 +147,28 @@ namespace Intrigue.Text
             return "I think of you " + opinion + ".";
         }
         #endregion
+
+        #region New Character Descriptions
+        public static string newCharacter_exSlave()
+        {
+            return "You have been freed by the...";
+        }
+        public static string newCharacter_gladiator()
+        {
+            return "After great fame as a gladiator...";
+        }
+        public static string newCharacter_exPatrician()
+        {
+            return "The last in the line of a long and noble line...";
+        }
+        public static string newCharacter_ex_Criminal()
+        {
+            return "You have spent your life working for the criminal....";
+        }
+
+
+        #endregion
+
+
     }
 }

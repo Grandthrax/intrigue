@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Intrigue.Text;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,7 @@ namespace Intrigue.Character
         public MainCharacter(Player Player)
         {
             InitializeComponent();
+            textBox1.Text = ViewedText.newCharacter_exSlave();
             player = Player;
         }
 
@@ -63,6 +65,36 @@ namespace Intrigue.Character
             }
             this.Close();
 
+        }
+
+        private void radioGroup1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(radioGroup1.SelectedIndex == 0)
+            {
+                //ex slave
+                pictureBox1.Image = Properties.Resources.slave;
+                textBox1.Text = ViewedText.newCharacter_exSlave();
+            }
+            if (radioGroup1.SelectedIndex == 1)
+            {
+                //fallen Patrician
+                pictureBox1.Image = Properties.Resources.fallen_patrician;
+                textBox1.Text = ViewedText.newCharacter_exPatrician();
+            }
+            if (radioGroup1.SelectedIndex == 2)
+            {
+                //gladiator
+                pictureBox1.Image = Properties.Resources.ex_gladiator;
+                textBox1.Text = ViewedText.newCharacter_gladiator();
+            }
+            if (radioGroup1.SelectedIndex == 3)
+            {
+                //criminal
+                pictureBox1.Image = Properties.Resources.criminal;
+                    textBox1.Text = ViewedText.newCharacter_ex_Criminal();
+            }
+
+           
         }
     }
 }
