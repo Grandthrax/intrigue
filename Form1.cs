@@ -51,6 +51,9 @@ namespace Intrigue
             //create the families
             InitiatePatricians();
 
+            //create the tribes
+            InitiateTribes();
+
 
             MainCharacter open = new MainCharacter(the_cast.the_player);
             open.ShowDialog();
@@ -60,6 +63,70 @@ namespace Intrigue
             
 
             
+        }
+
+        private void InitiateTribes()
+        {
+            //create the Palatina
+            TribeName tribe_name_temp;
+            tribe_name_temp = new TribeName(TribeNameEnum.Palatina);
+            Tribes palatina;
+
+            //A description for display when clicking on the district. Possibly put in an observation check later.
+            string Tribe_Palatina_Description = "In the South-West of the city, from the Palatium hill and beyond.These traditionalists consider themselves the original romans, everyone else is just new blood to them.";
+            //Each district is loyal to one of the four houses, and more likely to be influenced by their favours.
+            // public Tribe_Palatina_House_Loyalty Familynames
+             int Tribe_Palatina_Patrician_population = 50;
+             int Tribe_Palatina_Equite_population = 100;
+             int Tribe_Palatina_PlebisNobilis_population = 2000;
+             int Tribe_Palatina_Pleb_population = 10000;
+             int Tribe_Palatina_Proletarii_population = 5000;
+            //The total population who can vote, for determining election outcomes.
+             int Tribe_Palatina_Proposal_Support = 50;
+             int Tribe_Palatina_Proposal_Oppose = 50;
+
+            palatina = new Tribes(tribe_name_temp, everythingRandom);
+            palatina.patrician_population = Tribe_Palatina_Patrician_population;
+            palatina.equite_population = Tribe_Palatina_Equite_population;
+            palatina.plebisnobilis_population = Tribe_Palatina_PlebisNobilis_population;
+            palatina.pleb_population = Tribe_Palatina_Pleb_population;
+            palatina.proletarii_population = Tribe_Palatina_Proletarii_population;
+            palatina.proposal_support = Tribe_Palatina_Proposal_Support;
+            palatina.proposal_oppose = Tribe_Palatina_Proposal_Oppose;
+            palatina.description = Tribe_Palatina_Description;
+
+            the_cast.the_tribes.Add(palatina);
+
+            //create the Colinna
+            tribe_name_temp = new TribeName(TribeNameEnum.Collina);
+            Tribes Collina;
+
+            //A description for display when clicking on the district. Possibly put in an observation check later.
+            Tribe_Palatina_Description = "These are Collinas";
+            //Each district is loyal to one of the four houses, and more likely to be influenced by their favours.
+            // public Tribe_Palatina_House_Loyalty Familynames
+            Tribe_Palatina_Patrician_population = 50;
+            Tribe_Palatina_Equite_population = 100;
+            Tribe_Palatina_PlebisNobilis_population = 2000;
+            Tribe_Palatina_Pleb_population = 10000;
+            Tribe_Palatina_Proletarii_population = 5000;
+            //The total population who can vote, for determining election outcomes.
+            Tribe_Palatina_Proposal_Support = 50;
+            Tribe_Palatina_Proposal_Oppose = 50;
+
+            Collina = new Tribes(tribe_name_temp, everythingRandom);
+            Collina.patrician_population = Tribe_Palatina_Patrician_population;
+            Collina.equite_population = Tribe_Palatina_Equite_population;
+            Collina.plebisnobilis_population = Tribe_Palatina_PlebisNobilis_population;
+            Collina.pleb_population = Tribe_Palatina_Pleb_population;
+            Collina.proletarii_population = Tribe_Palatina_Proletarii_population;
+            Collina.proposal_support = Tribe_Palatina_Proposal_Support;
+            Collina.proposal_oppose = Tribe_Palatina_Proposal_Oppose;
+            Collina.description = Tribe_Palatina_Description;
+
+            the_cast.the_tribes.Add(Collina);
+
+
         }
 
         private void UpdatePage()
@@ -82,11 +149,9 @@ namespace Intrigue
 
         private void InitiatePatricians()
         {
-            var character_names = Mechanics.EnumToList();
-
-
-            Patricians Cornelia1 = new Patricians(new FamilyName(FamilyNames.Cornelius), everythingRandom);
+            
             //create the cornelias
+            Patricians Cornelia1 = new Patricians(new FamilyName(FamilyNames.Cornelius), everythingRandom);
             Corneliawealthlabel.Text = Cornelia1.wealth.ToString() + " million";
             the_cast.the_patricians.Add(Cornelia1);
 

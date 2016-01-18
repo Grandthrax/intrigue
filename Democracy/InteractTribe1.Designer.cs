@@ -75,9 +75,9 @@
             this.label3.Location = new System.Drawing.Point(2, 7);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 13);
+            this.label3.Size = new System.Drawing.Size(62, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Palatina";
+            this.label3.Text = "Tribe Name";
             // 
             // lblpalatinasupport
             // 

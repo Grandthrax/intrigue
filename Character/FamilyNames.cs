@@ -35,6 +35,8 @@ namespace Intrigue.Character
         public Dictionary<PatricianPair, Relationships> the_relationships;
 
         public List<Patricians> the_patricians;
+        public List<Tribes> the_tribes;
+
         public Player the_player;
 
         public TheCast()
@@ -42,6 +44,7 @@ namespace Intrigue.Character
             the_relationships = new Dictionary<PatricianPair, Relationships>();
             the_patricians = new List<Patricians>();
             the_player = new Player();
+            the_tribes = new List<Tribes>();
         }
     }
 

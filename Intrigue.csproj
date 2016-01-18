@@ -62,6 +62,7 @@
     <Compile Include="Character\Patricians.cs" />
     <Compile Include="Character\Player.cs" />
     <Compile Include="Character\Promises.cs" />
+    <Compile Include="Character\Tribes.cs" />
     <Compile Include="Conversation Box.cs">
       <SubType>Form</SubType>
     </Compile>
