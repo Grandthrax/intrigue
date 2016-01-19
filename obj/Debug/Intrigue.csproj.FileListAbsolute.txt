@@ -85,3 +85,19 @@ C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\tr
 C:\Users\Admin\Documents\Visual Studio 2015\Projects\Intrigue (throughgithub)\trunk\obj\Debug\Intrigue.Democracy.InteractTribe.resources
 C:\Users\Sam\Desktop\Intrigue2\trunk\obj\Debug\Intrigue.Democracy.Canvass.resources
 C:\Users\Sam\Desktop\Intrigue2\trunk\obj\Debug\Intrigue.Democracy.InteractTribe.resources
+C:\Users\Sam\Desktop\Intrigue\trunk\bin\Debug\Intrigue.exe.config
+C:\Users\Sam\Desktop\Intrigue\trunk\bin\Debug\Intrigue.exe
+C:\Users\Sam\Desktop\Intrigue\trunk\bin\Debug\Intrigue.pdb
+C:\Users\Sam\Desktop\Intrigue\trunk\obj\Debug\Intrigue.csprojResolveAssemblyReference.cache
+C:\Users\Sam\Desktop\Intrigue\trunk\obj\Debug\Intrigue.Character.MainCharacter.resources
+C:\Users\Sam\Desktop\Intrigue\trunk\obj\Debug\Intrigue.Conversation_Box.resources
+C:\Users\Sam\Desktop\Intrigue\trunk\obj\Debug\Intrigue.Democracy.Canvass.resources
+C:\Users\Sam\Desktop\Intrigue\trunk\obj\Debug\Intrigue.Form1.resources
+C:\Users\Sam\Desktop\Intrigue\trunk\obj\Debug\Intrigue.Democracy.InteractTribe.resources
+C:\Users\Sam\Desktop\Intrigue\trunk\obj\Debug\Intrigue.LoanRequest.resources
+C:\Users\Sam\Desktop\Intrigue\trunk\obj\Debug\Intrigue.PatricianInteract.resources
+C:\Users\Sam\Desktop\Intrigue\trunk\obj\Debug\Intrigue.Promise_Interaction.resources
+C:\Users\Sam\Desktop\Intrigue\trunk\obj\Debug\Intrigue.Properties.Resources.resources
+C:\Users\Sam\Desktop\Intrigue\trunk\obj\Debug\Intrigue.csproj.GenerateResource.Cache
+C:\Users\Sam\Desktop\Intrigue\trunk\obj\Debug\Intrigue.exe
+C:\Users\Sam\Desktop\Intrigue\trunk\obj\Debug\Intrigue.pdb

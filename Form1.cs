@@ -16,8 +16,8 @@ namespace Intrigue
     {
         Random everythingRandom;
 
-        private int turn_num;
-
+      //  private int turn_num;
+        private TheState the_state;
         private TheCast the_cast;
 
         private List<string> character_names;
@@ -34,6 +34,7 @@ namespace Intrigue
         {
 
             the_cast = new TheCast();
+            the_state = new TheState();
 
             character_names = new List<string>();
 
@@ -41,9 +42,20 @@ namespace Intrigue
             button3.Enabled = true;
             interactCorneliaButton.Enabled = true;
 
+           // panel1.BackgroundImage = Properties.Resources.ancient_rome_background;
+
+            corneliaPicture.MouseEnter += MouseEnter;
+            corneliaPicture.MouseClick += corneliaPicture_MouseClick;
+            corneliaPicture.MouseLeave += corneliaPicture_MouseLeave;
+
+            juliaPictureBox.MouseEnter += MouseEnter;
+            juliaPictureBox.MouseLeave += juliaPictureBox_MouseLeave;
+            juliaPictureBox.MouseClick += juliaPictureBox_MouseClick;
+            
+
             everythingRandom = new Random();
-            turn_num = 0;
-            turnsLeftLabel.Text = "Turn " + turn_num.ToString();
+            
+            turnsLeftLabel.Text = "Turn " + the_state.turn_number.ToString();
             gameOverLabel.Text = "";
 
             
@@ -63,6 +75,82 @@ namespace Intrigue
             
 
             
+        }
+
+        void juliaPictureBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            juliaPanel.Visible = !juliaPanel.Visible;
+        }
+
+        void juliaPictureBox_MouseLeave(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!juliaPanel.Visible)
+                {
+                    PictureBox picBox = (PictureBox)(sender);
+
+                    picBox.BorderStyle = BorderStyle.None;
+                }
+            }
+            catch
+            {
+                return;
+            }
+        }
+
+      
+
+        void corneliaPicture_MouseLeave(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!corneliaPanel.Visible)
+                {
+                    PictureBox picBox = (PictureBox)(sender);
+
+                    picBox.BorderStyle = BorderStyle.None;
+                }
+            }
+            catch
+            {
+                return;
+            }
+        }
+
+        void corneliaPicture_MouseClick(object sender, MouseEventArgs e)
+        {
+            corneliaPanel.Visible = !corneliaPanel.Visible;
+        }
+
+        void MouseEnter(object sender, EventArgs e)
+        {
+           // corneliaPicture.
+           // unselectBox(this.displayPanel);
+            
+
+            try
+            {
+                PictureBox picBox = (PictureBox)(sender);
+
+                picBox.BorderStyle = BorderStyle.Fixed3D;
+                
+            }
+            catch
+            {
+                return;
+            }
+        }
+
+        private void unselectBox(Control Form)
+        {
+            foreach (Control cControl in Form.Controls)
+            {
+                if (cControl is PictureBox)
+                {
+                    ((PictureBox)cControl).BorderStyle = BorderStyle.None;
+                }
+            }
         }
 
         private void InitiateTribes()
@@ -263,9 +351,9 @@ namespace Intrigue
             
 
 
-            turn_num++;
+            the_state.turn_number++;
             CheckPromises();
-            turnsLeftLabel.Text = "Turn " + turn_num.ToString();
+            turnsLeftLabel.Text = "Turn " + the_state.turn_number.ToString();
 
             //Check out the relationships between the houses
 
@@ -323,7 +411,7 @@ namespace Intrigue
                     EndGame(1);
                 }
 
-            if(turn_num > 5)
+            if (the_state.turn_number > 5)
                     {
                 if (the_cast.the_patricians[0].relationship[0] > 49)
                 {
@@ -349,9 +437,9 @@ namespace Intrigue
             var temp = new List<Promises>();
             foreach(var prom in the_cast.the_player.promises)
             {
-                
 
-                if(prom.turn_due < turn_num)
+
+                if (prom.turn_due < the_state.turn_number)
                 {
                     //effect relationship
                     int patrician_num = prom.promise_to.family_id;
@@ -362,7 +450,7 @@ namespace Intrigue
                     temp.Add(prom);
 
                 }
-                else if(prom.turn_due == turn_num)
+                else if (prom.turn_due == the_state.turn_number)
                 {
                     //highlight row
                 }

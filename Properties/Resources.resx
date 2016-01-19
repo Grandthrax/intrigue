@@ -118,6 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ancient_rome_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\ancient rome background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cornelia_home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\cornelia home.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="criminal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\criminal.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -126,6 +132,9 @@
   </data>
   <data name="fallen_patrician" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\fallen_patrician.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Julia_home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Julia home.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="slave" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\slave.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
