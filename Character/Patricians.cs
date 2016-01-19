@@ -85,7 +85,7 @@ namespace Intrigue.Character
             relationship[name.family_id] = 0;
             */
                 
-            wealth = everything_random.Next(10, 1000);
+            wealth = everything_random.Next(0, 50000)*200;
             name = Name;
 
             ego = everything_random.Next(0, 10);

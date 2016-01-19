@@ -15,6 +15,26 @@ namespace Intrigue
             return (player.street_smarts > new Random().Next(0, 10));
         }
 
+        public static string FormatSesterces(int money)
+        {
+
+            if(money < 1500)
+            {
+                return money.ToString("N0") + " Sesterces";
+            }
+            else if(money < 1500000)
+            {
+                double x = (double)money / 1000;
+                return (money/1000).ToString("N0") + " Thousand Sesterces";
+            }
+            else
+            {
+                double x = (double)money / 1000000;
+                return (x).ToString("N1") + " Million Sesterces";
+            }
+           
+        }
+
         public static bool ObservationRoll(Player player)
         {
             return (player.observation > new Random().Next(0, 10));

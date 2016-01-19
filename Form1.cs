@@ -26,6 +26,15 @@ namespace Intrigue
         {
             
             InitializeComponent();
+
+            corneliaPicture.MouseEnter += MouseEnter;
+            corneliaPicture.MouseClick += corneliaPicture_MouseClick;
+            corneliaPicture.MouseLeave += corneliaPicture_MouseLeave;
+
+            juliaPictureBox.MouseEnter += MouseEnter;
+            juliaPictureBox.MouseLeave += juliaPictureBox_MouseLeave;
+            juliaPictureBox.MouseClick += juliaPictureBox_MouseClick;
+
             FirstTurn();
             
         }
@@ -40,17 +49,11 @@ namespace Intrigue
 
             button2.Enabled = true;
             button3.Enabled = true;
-            interactCorneliaButton.Enabled = true;
+            
 
            // panel1.BackgroundImage = Properties.Resources.ancient_rome_background;
 
-            corneliaPicture.MouseEnter += MouseEnter;
-            corneliaPicture.MouseClick += corneliaPicture_MouseClick;
-            corneliaPicture.MouseLeave += corneliaPicture_MouseLeave;
-
-            juliaPictureBox.MouseEnter += MouseEnter;
-            juliaPictureBox.MouseLeave += juliaPictureBox_MouseLeave;
-            juliaPictureBox.MouseClick += juliaPictureBox_MouseClick;
+            
             
 
             everythingRandom = new Random();
@@ -276,8 +279,8 @@ namespace Intrigue
 
         private void UpdatePage()
         {
-            debtLabel.Text = the_cast.the_player.debt.ToString();
-            moneyLabel.Text = the_cast.the_player.wealth.ToString();
+            debtLabel.Text = Mechanics.FormatSesterces(the_cast.the_player.debt);
+            moneyLabel.Text = Mechanics.FormatSesterces(the_cast.the_player.wealth);
 
 
             var list = new BindingList<Promises>(the_cast.the_player.promises);
@@ -297,23 +300,32 @@ namespace Intrigue
             
             //create the cornelias
             Patricians Cornelia1 = new Patricians(new FamilyName(FamilyNames.Cornelius), everythingRandom);
-            Corneliawealthlabel.Text = Cornelia1.wealth.ToString() + " million";
+            Corneliawealthlabel.Text = Mechanics.FormatSesterces(Cornelia1.wealth);
             the_cast.the_patricians.Add(Cornelia1);
+            interactCorneliaButton.Enabled = true;
+            corneliaPanel.Visible = false;
+            corneliaPicture.BorderStyle = BorderStyle.None;
 
             //create the Marius
             var Marius1 = new Patricians(new FamilyName(FamilyNames.Marius), everythingRandom);
-            mariusWealthLabel.Text = Marius1.wealth.ToString() + " million";
+            mariusWealthLabel.Text = Mechanics.FormatSesterces(Marius1.wealth);
             the_cast.the_patricians.Add(Marius1);
+            button3.Enabled = true;
 
             //create the Julias
             var Julia = new Patricians(new FamilyName(FamilyNames.Julia), everythingRandom);
-            pat3label.Text = Julia.wealth.ToString() + " million";
+            pat3label.Text = Mechanics.FormatSesterces(Julia.wealth);
             the_cast.the_patricians.Add(Julia);
+            pat3button.Enabled = true;
+            juliaPanel.Visible = false;
+            juliaPictureBox.BorderStyle = BorderStyle.None;
+
 
             //create the Atilias
             var Atilia = new Patricians(new FamilyName(FamilyNames.Atilia), everythingRandom);
-            pat4label.Text = Atilia.wealth.ToString() + " million";
+            pat4label.Text = Mechanics.FormatSesterces(Atilia.wealth);
             the_cast.the_patricians.Add(Atilia);
+            pat4button.Enabled = true;
 
 
 

@@ -32,9 +32,10 @@ namespace Intrigue
                 }
             }
 
-
+            
 
             radioGroup2.Properties.EndUpdate();
+            radioGroup2.SelectedIndex = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)

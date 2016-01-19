@@ -40,6 +40,7 @@
             this.debtLabel = new System.Windows.Forms.Label();
             this.moneyLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.juliaPictureBox = new System.Windows.Forms.PictureBox();
             this.corneliaPicture = new System.Windows.Forms.PictureBox();
             this.btncanvass = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -62,16 +63,15 @@
             this.interactCorneliaButton = new System.Windows.Forms.Button();
             this.Corneliawealthlabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.juliaPictureBox = new System.Windows.Forms.PictureBox();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.juliaPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.corneliaPicture)).BeginInit();
             this.panel6.SuspendLayout();
             this.juliaPanel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.corneliaPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.juliaPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -198,6 +198,15 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // juliaPictureBox
+            // 
+            this.juliaPictureBox.Image = global::Intrigue.Properties.Resources.Julia_home;
+            this.juliaPictureBox.Location = new System.Drawing.Point(255, 395);
+            this.juliaPictureBox.Name = "juliaPictureBox";
+            this.juliaPictureBox.Size = new System.Drawing.Size(108, 89);
+            this.juliaPictureBox.TabIndex = 10;
+            this.juliaPictureBox.TabStop = false;
+            // 
             // corneliaPicture
             // 
             this.corneliaPicture.Image = global::Intrigue.Properties.Resources.cornelia_home;
@@ -224,14 +233,14 @@
             this.panel6.Controls.Add(this.pat4label);
             this.panel6.Controls.Add(this.label11);
             this.panel6.Controls.Add(this.label12);
-            this.panel6.Location = new System.Drawing.Point(3, 27);
+            this.panel6.Location = new System.Drawing.Point(14, 266);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(159, 132);
+            this.panel6.Size = new System.Drawing.Size(187, 102);
             this.panel6.TabIndex = 7;
             // 
             // pat4button
             // 
-            this.pat4button.Location = new System.Drawing.Point(29, 88);
+            this.pat4button.Location = new System.Drawing.Point(32, 61);
             this.pat4button.Name = "pat4button";
             this.pat4button.Size = new System.Drawing.Size(75, 23);
             this.pat4button.TabIndex = 3;
@@ -297,13 +306,13 @@
             this.juliaPanel.Controls.Add(this.label9);
             this.juliaPanel.Location = new System.Drawing.Point(391, 352);
             this.juliaPanel.Name = "juliaPanel";
-            this.juliaPanel.Size = new System.Drawing.Size(159, 132);
+            this.juliaPanel.Size = new System.Drawing.Size(173, 103);
             this.juliaPanel.TabIndex = 6;
             this.juliaPanel.Visible = false;
             // 
             // pat3button
             // 
-            this.pat3button.Location = new System.Drawing.Point(29, 88);
+            this.pat3button.Location = new System.Drawing.Point(29, 62);
             this.pat3button.Name = "pat3button";
             this.pat3button.Size = new System.Drawing.Size(75, 23);
             this.pat3button.TabIndex = 3;
@@ -314,7 +323,7 @@
             // pat3label
             // 
             this.pat3label.AutoSize = true;
-            this.pat3label.Location = new System.Drawing.Point(58, 37);
+            this.pat3label.Location = new System.Drawing.Point(57, 37);
             this.pat3label.Name = "pat3label";
             this.pat3label.Size = new System.Drawing.Size(60, 13);
             this.pat3label.TabIndex = 2;
@@ -335,14 +344,14 @@
             this.panel3.Controls.Add(this.mariusWealthLabel);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Location = new System.Drawing.Point(432, 174);
+            this.panel3.Location = new System.Drawing.Point(384, 184);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(159, 132);
+            this.panel3.Size = new System.Drawing.Size(180, 101);
             this.panel3.TabIndex = 3;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(10, 88);
+            this.button3.Location = new System.Drawing.Point(36, 59);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 3;
@@ -353,7 +362,7 @@
             // mariusWealthLabel
             // 
             this.mariusWealthLabel.AutoSize = true;
-            this.mariusWealthLabel.Location = new System.Drawing.Point(58, 37);
+            this.mariusWealthLabel.Location = new System.Drawing.Point(57, 37);
             this.mariusWealthLabel.Name = "mariusWealthLabel";
             this.mariusWealthLabel.Size = new System.Drawing.Size(60, 13);
             this.mariusWealthLabel.TabIndex = 2;
@@ -384,13 +393,13 @@
             this.corneliaPanel.Controls.Add(this.label2);
             this.corneliaPanel.Location = new System.Drawing.Point(315, 36);
             this.corneliaPanel.Name = "corneliaPanel";
-            this.corneliaPanel.Size = new System.Drawing.Size(159, 132);
+            this.corneliaPanel.Size = new System.Drawing.Size(180, 102);
             this.corneliaPanel.TabIndex = 0;
             this.corneliaPanel.Visible = false;
             // 
             // interactCorneliaButton
             // 
-            this.interactCorneliaButton.Location = new System.Drawing.Point(29, 88);
+            this.interactCorneliaButton.Location = new System.Drawing.Point(42, 63);
             this.interactCorneliaButton.Name = "interactCorneliaButton";
             this.interactCorneliaButton.Size = new System.Drawing.Size(75, 23);
             this.interactCorneliaButton.TabIndex = 3;
@@ -401,7 +410,7 @@
             // Corneliawealthlabel
             // 
             this.Corneliawealthlabel.AutoSize = true;
-            this.Corneliawealthlabel.Location = new System.Drawing.Point(58, 37);
+            this.Corneliawealthlabel.Location = new System.Drawing.Point(57, 37);
             this.Corneliawealthlabel.Name = "Corneliawealthlabel";
             this.Corneliawealthlabel.Size = new System.Drawing.Size(60, 13);
             this.Corneliawealthlabel.TabIndex = 2;
@@ -415,15 +424,6 @@
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Wealth:";
-            // 
-            // juliaPictureBox
-            // 
-            this.juliaPictureBox.Image = global::Intrigue.Properties.Resources.Julia_home;
-            this.juliaPictureBox.Location = new System.Drawing.Point(255, 395);
-            this.juliaPictureBox.Name = "juliaPictureBox";
-            this.juliaPictureBox.Size = new System.Drawing.Size(108, 89);
-            this.juliaPictureBox.TabIndex = 10;
-            this.juliaPictureBox.TabStop = false;
             // 
             // Form1
             // 
@@ -447,6 +447,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.juliaPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.corneliaPicture)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
@@ -456,7 +457,6 @@
             this.panel3.PerformLayout();
             this.corneliaPanel.ResumeLayout(false);
             this.corneliaPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.juliaPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
