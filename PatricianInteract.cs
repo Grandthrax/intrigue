@@ -16,9 +16,10 @@ namespace Intrigue
     {
         Patricians family;
         TheCast cast;
+        TheState the_state;
 
         
-        public PatricianInteract(Patricians Family, TheCast the_cast)
+        public PatricianInteract(Patricians Family, TheCast the_cast, TheState state)
         {
             family = Family;
             InitializeComponent();
@@ -26,6 +27,7 @@ namespace Intrigue
             feelingLabel.Text = "";
             feelingLabel.AutoSize = true;
             cast = the_cast;
+            the_state = state;
 
             PlayerPerception();
         }
@@ -116,7 +118,10 @@ namespace Intrigue
 
         private void button7_Click(object sender, EventArgs e)
         {
+            LoanRequest open = new LoanRequest(family, cast, the_state);
+            open.ShowDialog();
 
+            askForLoanButton.Enabled = false;
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -135,7 +140,7 @@ namespace Intrigue
             prom.type_of_promise = Promise.Insult;
             player.promises.Add(prom);*/
 
-            Promise_Interaction open = new Promise_Interaction(family, cast);
+            Promise_Interaction open = new Promise_Interaction(family, cast, the_state);
             open.ShowDialog();
 
           
@@ -149,8 +154,7 @@ namespace Intrigue
 
         private void button2_Click(object sender, EventArgs e)
         {
-            LoanRequest open = new LoanRequest();
-            open.ShowDialog();
+
         }
     }
 }

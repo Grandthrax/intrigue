@@ -13,6 +13,12 @@ namespace Intrigue.Character
         public Promise type_of_promise;
         public int turn_due;
         public int relationship_bonus;
+        public int amount_owed;
+
+        public Promises()
+        {
+            amount_owed = 0;
+        }
 
         public string promise_for
         {

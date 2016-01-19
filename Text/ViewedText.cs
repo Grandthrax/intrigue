@@ -25,6 +25,24 @@ namespace Intrigue.Text
             return "Something is afoot, there are murmerings in the street but when you seek for an answer, you find only furtive glances and vague warnings.";
         }
 
+        //patricians descriptions
+        public static string julia_description()
+        {
+            return "The Julia is one of the most ancient patrician families in Rome.";
+        }
+        public static string marius_description()
+        {
+            return "The Marius is one of the most ancient patrician families in Rome.";
+        }
+        public static string atilia_description()
+        {
+            return "The Atilia is one of the most ancient patrician families in Rome.";
+        }
+        public static string cornelia_description()
+        {
+            return "The Cornelia is one of the most ancient patrician families in Rome.";
+        }
+
         //game over
         #region GAME OVER
         //assasinated

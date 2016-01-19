@@ -139,4 +139,10 @@
   <data name="slave" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\slave.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Atilia_home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Atilia home.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Marius_home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Marius home.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

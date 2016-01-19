@@ -28,38 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
-            this.radioGroup2 = new DevExpress.XtraEditors.RadioGroup();
+            this.promiseRadioGroup = new DevExpress.XtraEditors.RadioGroup();
+            this.moneyRadioGroup = new DevExpress.XtraEditors.RadioGroup();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroup2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.promiseRadioGroup.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moneyRadioGroup.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // radioGroup1
+            // promiseRadioGroup
             // 
-            this.radioGroup1.Location = new System.Drawing.Point(13, 13);
-            this.radioGroup1.Name = "radioGroup1";
-            this.radioGroup1.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            this.promiseRadioGroup.Location = new System.Drawing.Point(13, 13);
+            this.promiseRadioGroup.Name = "promiseRadioGroup";
+            this.promiseRadioGroup.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "Assasinate Rival"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(2)), "Insult Rival"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(0)), "Repay Double In 14 Turns"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "Repay Triple in 14 Turns"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "Offer Nothing")});
-            this.radioGroup1.Size = new System.Drawing.Size(260, 133);
-            this.radioGroup1.TabIndex = 0;
+            this.promiseRadioGroup.Size = new System.Drawing.Size(260, 133);
+            this.promiseRadioGroup.TabIndex = 0;
             // 
-            // radioGroup2
+            // moneyRadioGroup
             // 
-            this.radioGroup2.Location = new System.Drawing.Point(279, 13);
-            this.radioGroup2.Name = "radioGroup2";
-            this.radioGroup2.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "10,000"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "20,000"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "100,000"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "500,000"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "1 Million")});
-            this.radioGroup2.Size = new System.Drawing.Size(222, 133);
-            this.radioGroup2.TabIndex = 1;
+            this.moneyRadioGroup.Location = new System.Drawing.Point(279, 13);
+            this.moneyRadioGroup.Name = "moneyRadioGroup";
+            this.moneyRadioGroup.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(10000, "10,000"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(20000, "20,000"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(100000, "100,000"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(500000, "500,000"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(1000000, "1 Million")});
+            this.moneyRadioGroup.Size = new System.Drawing.Size(222, 133);
+            this.moneyRadioGroup.TabIndex = 1;
             // 
             // button1
             // 
@@ -77,20 +77,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(515, 262);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.radioGroup2);
-            this.Controls.Add(this.radioGroup1);
+            this.Controls.Add(this.moneyRadioGroup);
+            this.Controls.Add(this.promiseRadioGroup);
             this.Name = "LoanRequest";
             this.Text = "LoanRequest";
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroup2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.promiseRadioGroup.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moneyRadioGroup.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraEditors.RadioGroup radioGroup1;
-        private DevExpress.XtraEditors.RadioGroup radioGroup2;
+        private DevExpress.XtraEditors.RadioGroup promiseRadioGroup;
+        private DevExpress.XtraEditors.RadioGroup moneyRadioGroup;
         private System.Windows.Forms.Button button1;
 
     }

@@ -16,10 +16,12 @@ namespace Intrigue
     {
         Patricians this_family;
         TheCast the_cast;
-        public Promise_Interaction(Patricians family, TheCast cast)
+        TheState the_state;
+        public Promise_Interaction(Patricians family, TheCast cast, TheState state)
         {
             this_family = family;
             the_cast = cast;
+            the_state = state;
 
             InitializeComponent();
 
@@ -31,9 +33,7 @@ namespace Intrigue
                     radioGroup2.Properties.Items.Add(new RadioGroupItem(i, mm[i]));
                 }
             }
-
             
-
             radioGroup2.Properties.EndUpdate();
             radioGroup2.SelectedIndex = 0;
         }
@@ -44,7 +44,7 @@ namespace Intrigue
             new_promise.promise_to = this_family.name;
             new_promise.promise_vs = the_cast.the_patricians.FindLast(x => x.name.family_name_string == radioGroup2.Properties.Items[radioGroup2.SelectedIndex].Description).name;
             new_promise.relationship_bonus = 5;
-            new_promise.turn_due = 5;
+            new_promise.turn_due = the_state.turn_number + 5;
             new_promise.type_of_promise = Promise.Insult;
             the_cast.the_player.promises.Add(new_promise);
 

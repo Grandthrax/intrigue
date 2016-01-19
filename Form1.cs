@@ -35,8 +35,60 @@ namespace Intrigue
             juliaPictureBox.MouseLeave += juliaPictureBox_MouseLeave;
             juliaPictureBox.MouseClick += juliaPictureBox_MouseClick;
 
+            mariuspictureBox.MouseEnter += MouseEnter;
+            mariuspictureBox.MouseLeave += MariuspictureBox_MouseLeave;
+            mariuspictureBox.MouseClick += MariuspictureBox_MouseClick;
+
+            atiliaPictureBox.MouseEnter += MouseEnter;
+            atiliaPictureBox.MouseLeave += AtiliaPictureBox_MouseLeave;
+            atiliaPictureBox.MouseClick += AtiliaPictureBox_MouseClick;
+
             FirstTurn();
             
+        }
+
+        private void AtiliaPictureBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            atiliaPanel.Visible = !atiliaPanel.Visible;
+        }
+
+        private void AtiliaPictureBox_MouseLeave(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!atiliaPanel.Visible)
+                {
+                    PictureBox picBox = (PictureBox)(sender);
+
+                    picBox.BorderStyle = BorderStyle.None;
+                }
+            }
+            catch
+            {
+                return;
+            }
+        }
+
+        private void MariuspictureBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            mariusPanel.Visible = !mariusPanel.Visible;
+        }
+
+        private void MariuspictureBox_MouseLeave(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!mariusPanel.Visible)
+                {
+                    PictureBox picBox = (PictureBox)(sender);
+
+                    picBox.BorderStyle = BorderStyle.None;
+                }
+            }
+            catch
+            {
+                return;
+            }
         }
 
         private void FirstTurn()
@@ -52,10 +104,7 @@ namespace Intrigue
             
 
            // panel1.BackgroundImage = Properties.Resources.ancient_rome_background;
-
-            
-            
-
+           
             everythingRandom = new Random();
             
             turnsLeftLabel.Text = "Turn " + the_state.turn_number.ToString();
@@ -67,7 +116,6 @@ namespace Intrigue
 
             //create the tribes
             InitiateTribes();
-
             
 
             MainCharacter open = new MainCharacter(the_cast.the_player);
@@ -305,12 +353,18 @@ namespace Intrigue
             interactCorneliaButton.Enabled = true;
             corneliaPanel.Visible = false;
             corneliaPicture.BorderStyle = BorderStyle.None;
+            corneliaTextBox.Text = ViewedText.cornelia_description();
+
 
             //create the Marius
             var Marius1 = new Patricians(new FamilyName(FamilyNames.Marius), everythingRandom);
             mariusWealthLabel.Text = Mechanics.FormatSesterces(Marius1.wealth);
             the_cast.the_patricians.Add(Marius1);
             button3.Enabled = true;
+            mariusPanel.Visible = false;
+            mariuspictureBox.BorderStyle = BorderStyle.None;
+            mariusTextBox.Text = ViewedText.marius_description();
+
 
             //create the Julias
             var Julia = new Patricians(new FamilyName(FamilyNames.Julia), everythingRandom);
@@ -319,13 +373,17 @@ namespace Intrigue
             pat3button.Enabled = true;
             juliaPanel.Visible = false;
             juliaPictureBox.BorderStyle = BorderStyle.None;
-
+            juliaTextBox.Text = ViewedText.julia_description();
 
             //create the Atilias
             var Atilia = new Patricians(new FamilyName(FamilyNames.Atilia), everythingRandom);
             pat4label.Text = Mechanics.FormatSesterces(Atilia.wealth);
             the_cast.the_patricians.Add(Atilia);
             pat4button.Enabled = true;
+            atiliaPanel.Visible = false;
+            atiliaPictureBox.BorderStyle = BorderStyle.None;
+            atiliaTextBox.Text = ViewedText.atilia_description();
+
 
 
 
@@ -341,7 +399,7 @@ namespace Intrigue
                        
                         if(!the_cast.the_relationships.Any(x => x.Key.Any(pat,pat2)))
                         {
-                            the_cast.the_relationships.Add(new PatricianPair(pat, pat2), new Relationships(everythingRandom.Next(-50, 50)));
+                            the_cast.the_relationships.Add(new PatricianPair(pat, pat2), new Relationships(everythingRandom.Next(-25, 25)));
                         }
                     }
 
@@ -413,10 +471,7 @@ namespace Intrigue
                 }
             }*/
 
-
             
-
-
                 //Check if you are assasisinated
             if (the_cast.the_patricians[0].relationship[0] < -49 | the_cast.the_patricians[1].relationship[0] < -49)
                 {
@@ -437,8 +492,6 @@ namespace Intrigue
                 {
                     EndGame(4);
                 }
-
-
             }
             UpdatePage();
         }
@@ -510,7 +563,7 @@ namespace Intrigue
 
         private void interactCorneliaButton_Click(object sender, EventArgs e)
         {
-            PatricianInteract open = new PatricianInteract(the_cast.the_patricians[0], the_cast);
+            PatricianInteract open = new PatricianInteract(the_cast.the_patricians[0], the_cast, the_state);
             open.ShowDialog();
 
             interactCorneliaButton.Enabled = false;
@@ -520,7 +573,7 @@ namespace Intrigue
 
         private void button3_Click(object sender, EventArgs e)
         {
-            PatricianInteract open = new PatricianInteract(the_cast.the_patricians[1], the_cast);
+            PatricianInteract open = new PatricianInteract(the_cast.the_patricians[1], the_cast, the_state);
             open.ShowDialog();
 
             
@@ -531,7 +584,7 @@ namespace Intrigue
 
         private void pat3button_Click(object sender, EventArgs e)
         {
-            PatricianInteract open = new PatricianInteract(the_cast.the_patricians[2], the_cast);
+            PatricianInteract open = new PatricianInteract(the_cast.the_patricians[2], the_cast, the_state);
             open.ShowDialog();
 
 
@@ -542,7 +595,7 @@ namespace Intrigue
 
         private void pat4button_Click(object sender, EventArgs e)
         {
-            PatricianInteract open = new PatricianInteract(the_cast.the_patricians[3], the_cast);
+            PatricianInteract open = new PatricianInteract(the_cast.the_patricians[3], the_cast, the_state);
             open.ShowDialog();
 
 
