@@ -29,6 +29,8 @@ namespace Intrigue
             cast = the_cast;
             the_state = state;
 
+            this.Text = family.name.family_name_string + "'s Estate";
+
             PlayerPerception();
         }
 

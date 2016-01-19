@@ -86,7 +86,7 @@
             // 
             this.panel4.Controls.Add(this.dataGridView1);
             this.panel4.Controls.Add(this.label7);
-            this.panel4.Location = new System.Drawing.Point(602, 47);
+            this.panel4.Location = new System.Drawing.Point(661, 43);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(348, 281);
             this.panel4.TabIndex = 5;
@@ -115,7 +115,7 @@
             // gameOverLabel
             // 
             this.gameOverLabel.AutoSize = true;
-            this.gameOverLabel.Location = new System.Drawing.Point(34, 543);
+            this.gameOverLabel.Location = new System.Drawing.Point(27, 554);
             this.gameOverLabel.Name = "gameOverLabel";
             this.gameOverLabel.Size = new System.Drawing.Size(61, 13);
             this.gameOverLabel.TabIndex = 4;
@@ -206,7 +206,7 @@
             this.panel1.Controls.Add(this.corneliaPanel);
             this.panel1.Location = new System.Drawing.Point(12, 43);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(584, 497);
+            this.panel1.Size = new System.Drawing.Size(626, 500);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -507,7 +507,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(960, 576);
+            this.ClientSize = new System.Drawing.Size(1044, 576);
             this.Controls.Add(this.moneyLabel);
             this.Controls.Add(this.debtLabel);
             this.Controls.Add(this.label6);
@@ -519,7 +519,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Intrigue";
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -89,7 +89,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.radioGroup1);
             this.Name = "MainCharacter";
-            this.Text = "MainCharacter";
+            this.Text = "Character Creation";
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
