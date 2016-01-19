@@ -493,7 +493,28 @@ namespace Intrigue
                     EndGame(4);
                 }
             }
+
+            RandomEvent();
+
             UpdatePage();
+        }
+
+        private void RandomEvent()
+        {
+
+            var random = everythingRandom.Next(0, 2);
+            switch(random)
+            {
+                case 0:
+                    MessageBox.Show(ViewedText.turn_event_eclipse());
+                    break;
+                case 1:
+                    MessageBox.Show(ViewedText.turn_event_slave_revolt());
+                    break;
+
+            }
+
+
         }
 
         private void CheckPromises()

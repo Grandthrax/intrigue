@@ -188,5 +188,16 @@ namespace Intrigue.Text
         #endregion
 
 
+        #region Turn Events
+        public static string turn_event_eclipse()
+        {
+            return "There was a dark omen today. The sun was completely blotted from the sky.";
+        }
+        public static string turn_event_slave_revolt()
+        {
+            return "A host of slaves have taken up arms. The consuls dispatch immediately.";
+        }
+
+        #endregion
     }
 }
