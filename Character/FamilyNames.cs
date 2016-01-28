@@ -37,6 +37,8 @@ namespace Intrigue.Character
         public List<Patricians> the_patricians;
         public List<Tribes> the_tribes;
 
+        public List<Opposition> the_opposition;
+
         public Player the_player;
 
         public TheCast()
@@ -45,6 +47,7 @@ namespace Intrigue.Character
             the_patricians = new List<Patricians>();
             the_player = new Player();
             the_tribes = new List<Tribes>();
+            the_opposition = new List<Opposition>();
         }
     }
 

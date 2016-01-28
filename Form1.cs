@@ -224,7 +224,7 @@ namespace Intrigue
              int Tribe_Palatina_Proposal_Support = 50;
              int Tribe_Palatina_Proposal_Oppose = 50;
 
-            palatina = new Tribes(tribe_name_temp, everythingRandom);
+            palatina = new Tribes(tribe_name_temp);
             palatina.patrician_population = Tribe_Palatina_Patrician_population;
             palatina.equite_population = Tribe_Palatina_Equite_population;
             palatina.plebisnobilis_population = Tribe_Palatina_PlebisNobilis_population;
@@ -253,7 +253,7 @@ namespace Intrigue
             Tribe_Palatina_Proposal_Support = 50;
             Tribe_Palatina_Proposal_Oppose = 50;
 
-            Collina = new Tribes(tribe_name_temp, everythingRandom);
+            Collina = new Tribes(tribe_name_temp);
             Collina.patrician_population = Tribe_Palatina_Patrician_population;
             Collina.equite_population = Tribe_Palatina_Equite_population;
             Collina.plebisnobilis_population = Tribe_Palatina_PlebisNobilis_population;
@@ -282,7 +282,7 @@ namespace Intrigue
             Tribe_Palatina_Proposal_Support = 50;
             Tribe_Palatina_Proposal_Oppose = 50;
 
-            Suburra = new Tribes(tribe_name_temp, everythingRandom);
+            Suburra = new Tribes(tribe_name_temp);
             Suburra.patrician_population = Tribe_Palatina_Patrician_population;
             Suburra.equite_population = Tribe_Palatina_Equite_population;
             Suburra.plebisnobilis_population = Tribe_Palatina_PlebisNobilis_population;
@@ -312,7 +312,7 @@ namespace Intrigue
             Tribe_Palatina_Proposal_Support = 50;
             Tribe_Palatina_Proposal_Oppose = 50;
 
-            Esquilana = new Tribes(tribe_name_temp, everythingRandom);
+            Esquilana = new Tribes(tribe_name_temp);
             Esquilana.patrician_population = Tribe_Palatina_Patrician_population;
             Esquilana.equite_population = Tribe_Palatina_Equite_population;
             Esquilana.plebisnobilis_population = Tribe_Palatina_PlebisNobilis_population;
@@ -329,7 +329,7 @@ namespace Intrigue
         {
             debtLabel.Text = Mechanics.FormatSesterces(the_cast.the_player.debt);
             moneyLabel.Text = Mechanics.FormatSesterces(the_cast.the_player.wealth);
-
+            
 
             var list = new BindingList<Promises>(the_cast.the_player.promises);
             

@@ -32,11 +32,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Charts.v13.2.Core, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v13.2.Core, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Sparkline.v13.2.Core, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v13.2.UI, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v13.2.Wizard, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
@@ -89,6 +95,12 @@
     <Compile Include="Democracy\InteractTribe1.Designer.cs">
       <DependentUpon>InteractTribe1.cs</DependentUpon>
     </Compile>
+    <Compile Include="IntrigueMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntrigueMain.Designer.cs">
+      <DependentUpon>IntrigueMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoanRequest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +138,9 @@
     <EmbeddedResource Include="Democracy\InteractTribe1.resx">
       <DependentUpon>InteractTribe1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IntrigueMain.resx">
+      <DependentUpon>IntrigueMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoanRequest.resx">
       <DependentUpon>LoanRequest.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +150,7 @@
     <EmbeddedResource Include="Promise_Interaction.resx">
       <DependentUpon>Promise_Interaction.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -179,6 +195,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\Atilia home.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\romemap.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\romemap_palatina.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

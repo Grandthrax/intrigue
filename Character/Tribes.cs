@@ -28,6 +28,7 @@ namespace Intrigue.Character
 
     public class Tribes
     {
+
         //A description for display when clicking on the district. Possibly put in an observation check later.
         public string description;
         //Each district is loyal to one of the four houses, and more likely to be influenced by their favours.
@@ -45,11 +46,17 @@ namespace Intrigue.Character
 
         public TribeName name;
         private Random everything_random;
+        public Dictionary<OppositionNames,int> relationships;
+        public int relation_with_player;
 
-        public Tribes(TribeName Name, Random randomness)
+
+        public Tribes(TribeName Name)
         {
+
             name = Name;
-            everything_random = randomness;
+            everything_random = new Random();
+            relation_with_player = 0;
+            relationships = new Dictionary<OppositionNames, int>();
         }
 
 
